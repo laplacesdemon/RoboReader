@@ -154,9 +154,9 @@
         pagebarFrame.origin.y = self.frame.size.height - sizes.sliderHeight;
         pagebarFrame.size.height = sizes.sliderHeight;
         pagebarSlider = [[UISlider alloc] initWithFrame:pagebarFrame];
-        [pagebarSlider setThumbImage:[UIImage imageNamed:@"page-bg.png"] forState:UIControlStateNormal];
-        [pagebarSlider setMinimumTrackImage:[UIImage imageNamed:@"progress_bar.png"] forState:UIControlStateNormal];
-        [pagebarSlider setMaximumTrackImage:[UIImage imageNamed:@"progress_bar.png"] forState:UIControlStateNormal];
+        [pagebarSlider setThumbImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/page-bg"] forState:UIControlStateNormal];
+        [pagebarSlider setMinimumTrackImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/progress_bar"] forState:UIControlStateNormal];
+        [pagebarSlider setMaximumTrackImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/progress_bar"] forState:UIControlStateNormal];
         [pagebarSlider setMinimumValue:1.0f];
         [pagebarSlider setMaximumValue:pages];
         [pagebarSlider setValue:[document.currentPage floatValue]];
@@ -228,13 +228,13 @@
             //[smallThumbView setBackgroundColor:[UIColor purpleColor]];
 
             if (page % 2) {
-                //    [smallThumbView setImage: [UIImage imageNamed:@"page_right.png"]];
+                //    [smallThumbView setImage: [UIImage imageNamed:@"NewsletterDefault.bundle/reader/page_right"]];
                 thumbRect.origin.x += previewPageWidthWithGap;
                 [currentPageTextField setTextAlignment:NSTextAlignmentLeft];
                 [currentPageTextField setText:[NSString stringWithFormat:@"    %i", page]];
             }
             else {
-                //    [smallThumbView setImage: [UIImage imageNamed:@"page_left.png"]];
+                //    [smallThumbView setImage: [UIImage imageNamed:@"NewsletterDefault.bundle/reader/page_left"]];
                 thumbRect.origin.x += previewPageWidthWithGap - sizes.thumbSmallGap;
                 [currentPageTextField setTextAlignment:NSTextAlignmentRight];
                 [currentPageTextField setText:[NSString stringWithFormat:@"%i    ", page]];
@@ -573,10 +573,10 @@
             smallThumbView = [[UIImageView alloc] initWithFrame:thumbRect];
             if (page % 2) {
                 //smallThumbText = [[UITextField alloc] initWithFrame:CGRectMake(thumbRect.origin.x, thumbSmallHeight, 20, 20)];
-                [smallThumbView setImage:[UIImage imageNamed:@"page_right"]];
+                [smallThumbView setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/page_right"]];
             }
             else {
-                [smallThumbView setImage:[UIImage imageNamed:@"page_left"]];
+                [smallThumbView setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/page_left"]];
             }
             [pdfController addGettingPageBarImageToQueue:page];
         }
@@ -727,7 +727,7 @@
 
         strokeTrackImage = [[UIImageView alloc] init];
         [self addSubview:strokeTrackImage];
-        [strokeTrackImage setImage:[UIImage imageNamed:@"Stroke2px.png"]];
+        [strokeTrackImage setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/Stroke2px"]];
 
     }
 
@@ -749,7 +749,7 @@
             orangeOffset = CGRectMake(sizes.thumbSmallGap - 6, 0, previewPageWidth + 12, sizes.thumbSmallHeight + 8);
         else
             orangeOffset = CGRectMake(pageOffset - previewPageWidth - 6, 0, previewPageWidth + 12, sizes.thumbSmallHeight + 8);
-        [strokeTrackImage setImage:[UIImage imageNamed:@"Stroke2px_single.png"]];
+        [strokeTrackImage setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/Stroke2px_single"]];
         [strokeTrackImage setFrame:orangeOffset];
 
     }
@@ -758,7 +758,7 @@
         if (page % 2) {
             pageOffset = page * (previewPageWidth + sizes.thumbSmallGap) - sizes.thumbSmallGap * (-1 + page / 2 + page % 2);
             orangeOffset = CGRectMake(pageOffset - 2 * previewPageWidth - 6, 0, previewPageWidth * 2 + 12, sizes.thumbSmallHeight + 8);
-            [strokeTrackImage setImage:[UIImage imageNamed:@"Stroke2px.png"]];
+            [strokeTrackImage setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/Stroke2px"]];
             [strokeTrackImage setFrame:orangeOffset];
         }
         else [self setStrokePage:(page + 1)];

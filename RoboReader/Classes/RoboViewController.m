@@ -144,7 +144,7 @@
         }
 
     }
-
+    
     pdfController.currentPage = page;
     CGRect viewRect = CGRectZero;
     viewRect.size = theScrollView.bounds.size;
@@ -392,8 +392,13 @@
     
     // if it is ios7+, just use all the status bar space
     toolbarRect.origin.y = (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) ? 0.0f : 20.0f;
-    NSString *toolbarTitle = (self.title == nil) ? [document.fileName stringByDeletingPathExtension] : self.title;
-
+    NSString *toolbarTitle;
+    if (SHOW_TITLE) {
+        toolbarTitle = (self.title == nil) ? [document.fileName stringByDeletingPathExtension] : self.title;
+    } else {
+        toolbarTitle = @"";
+    }
+    
     mainToolbar = [[RoboMainToolbar alloc] initWithFrame:toolbarRect title:toolbarTitle];
 
     mainToolbar.delegate = self;

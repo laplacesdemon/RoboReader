@@ -57,7 +57,7 @@
         CGFloat titleWidth = (self.bounds.size.width - (titleX * 2.0f));
 #warning fix the number 1024, reset toolbar img frame on orientation change
         UIImageView *toolbarImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 1024.0f, frame.size.height)];
-        [toolbarImg setImage:[UIImage imageNamed:@"nav_bar_plashka.png"]];
+        [toolbarImg setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/nav_bar_plashka.png"]];
         [self addSubview:toolbarImg];
 
         // shift buttons a little to avoid overlapping with ios7 status bar
@@ -84,7 +84,7 @@
         [doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchDown];
 
         UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake((READER_TOOLBAR_HEIGHT - 18) / 2, (READER_TOOLBAR_HEIGHT - 18) / 2 + ios7padding, 13, 18)];
-        [backImage setImage:[UIImage imageNamed:@"back_button.png"]];
+        [backImage setImage:[UIImage imageNamed:@"NewsletterDefault.bundle/reader/back_button.png"]];
         [doneButton addSubview:backImage];
 
         doneButton.autoresizingMask = UIViewAutoresizingNone;
