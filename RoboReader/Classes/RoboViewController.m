@@ -343,7 +343,6 @@
     }
     else {
         [self setWantsFullScreenLayout:YES];
-        
     }
     
     CGRect viewRect = self.view.bounds;
@@ -365,7 +364,9 @@
 //    }
 
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
 
     contentViews = [[NSMutableDictionary alloc] init];
     loadedPages = [[NSMutableSet alloc] init];
