@@ -44,6 +44,7 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 #define SHOW_TITLE NO
+#define SHOW_PAGE_NUMBER_ON_LOAD YES
 
 #import <Foundation/Foundation.h>
 
