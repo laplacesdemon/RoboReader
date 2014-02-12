@@ -1,4 +1,3 @@
-
 [![Build Status](https://travis-ci.org/vaivaikitay/RoboReader.png?branch=master)](https://travis-ci.org/vaivaikitay/RoboReader)
 
 With a couple of lines of code you can create a PDF view controller. This framework is very fast and easy to use.
@@ -46,3 +45,18 @@ RoboReader was created by [Mikhail Viceman](https://github.com/vaivaikitay) in t
 ## License
 
 RoboReader is available under the MIT license. See the LICENSE file for more info.
+
+## Information about this fork
+
+I ([Suleyman Melikoglu](http://www.melikoglu.info)) have added some functionality, notifications and public API changes that I believe doesn't match with the design goals of the original project.
+
+### Images 
+
+I moved all graphics to `NewsletterDefault.bundle/reader/`. So you'll see no graphics unless create this bundle and move graphics there.
+I regret that I did this not optional. It is a next step for me to fix it.
+
+### Notifications
+
+See `RoboConstants.h` for the list of notifications.
+
+kRoboDidDisplayPageNotification - Sent when the page is displayed.
