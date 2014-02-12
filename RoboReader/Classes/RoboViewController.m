@@ -25,7 +25,7 @@
 @implementation RoboViewController
 
 
-@synthesize delegate;
+@synthesize delegate, document;
 
 - (void)showDocument {
 
@@ -237,7 +237,10 @@
     if ([document.currentPage intValue] != page) {
         document.currentPage = @(page);
     }
-
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kRoboDidDisplayPageNotification
+                                                        object:self
+                                                      userInfo:@{@"page": [NSNumber numberWithInt:page]}];
 }
 
 

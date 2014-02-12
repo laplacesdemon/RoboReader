@@ -45,8 +45,6 @@
         RoboMainToolbarDelegate, RoboMainPagebarDelegate, PDFControllerDelegateToView, RoboContentViewDelegate> {
 @private
 
-    RoboDocument *document;
-
     UIScrollView *theScrollView;
     RoboPDFController *pdfController;
     RoboPDFController *smallPdfController;
@@ -68,6 +66,8 @@
     UIButton *rightButton;
 
 }
+
+@property (nonatomic) RoboDocument *document;
 
 @property(nonatomic, unsafe_unretained, readwrite) id <RoboViewControllerDelegate> delegate;
 

@@ -22,7 +22,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 #define READER_TOOLBAR_HEIGHT 44.0f
 
 #define PAGEBAR_HEIGHT_PAD 190.0f
@@ -46,7 +45,8 @@
 #define SHOW_TITLE NO
 #define SHOW_PAGE_NUMBER_ON_LOAD YES
 
-#import <Foundation/Foundation.h>
+// the userinfo dictionary sent by the notification consists of `page` key.
+#define kRoboDidDisplayPageNotification @"kRoboDidDisplayPageNotification"
 
 @interface RoboConstants : NSObject
 
